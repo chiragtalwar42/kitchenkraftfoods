@@ -140,6 +140,22 @@
             margin-bottom: 1rem;
         }
 
+        .hero-badge {
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            color: var(--text-light);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 0.4rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+        }
+
         @media (max-width: 768px) {
             .split-section {
                 grid-template-columns: 1fr;
@@ -173,7 +189,8 @@
     <!-- Hero Section -->
     <section class="hero-section parallax-bg">
         <div class="container hero-content reveal">
-            <h1>Chef-made frozen Indian food.<br>Consistent quality, every order.</h1>
+            <span class="hero-badge">Consistent quality, every order.</span>
+            <h1>Chef-made frozen Indian food.</h1>
             <p>Handmade gravies, curries, and snacks for restaurants, caterers, hotels, and corporate kitchens. No
                 factory shortcuts. No compromise.</p>
             <div class="hero-buttons">
