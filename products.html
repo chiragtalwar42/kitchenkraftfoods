@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handmade Frozen Indian Gravies, Curries & Snacks | KitchenKraft Foods</title>
+    <meta name="description"
+        content="Browse our full range of handmade frozen Indian food. Available in bulk sizes for professional kitchens.">
+    <link rel="stylesheet" href="styles/main.css?v=2">
+    <style>
+        .page-header {
+            background-color: var(--brand-green);
+            color: var(--text-light);
+            text-align: center;
+            padding: 6rem 1.5rem 4rem;
+        }
+
+        .page-header h1 {
+            color: var(--accent-gold);
+            font-size: clamp(2.5rem, 4vw, 3.5rem);
+            margin-bottom: 1.5rem;
+        }
+
+        .menu-category {
+            margin-bottom: 4rem;
+        }
+
+        .menu-category h2 {
+            border-bottom: 2px solid var(--accent-gold);
+            padding-bottom: 0.5rem;
+            margin-bottom: 2.5rem;
+            display: inline-block;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 2rem;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .product-item:hover {
+            box-shadow: var(--shadow-md);
+            border-color: var(--accent-gold);
+        }
+
+        .product-name {
+            font-size: 1.25rem;
+            color: var(--brand-green);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            font-family: var(--font-heading);
+        }
+
+        .product-details {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            min-height: 48px;
+        }
+
+        .product-meta {
+            font-size: 0.9rem;
+            background: var(--bg-main);
+            padding: 1rem;
+            border-radius: 4px;
+        }
+
+        .product-meta p {
+            margin-bottom: 0.5rem;
+        }
+
+        .product-meta p:last-child {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/Logo_V2.png" alt="KitchenKraft Foods Logo">
+                KitchenKraft Foods
+            </a>
+            <button class="mobile-menu-btn">☰</button>
+            <nav class="nav-links">
+                <a href="products.html" style="color: var(--accent-gold);">What We Make</a>
+                <a href="why-us.html">How We Work</a>
+                <a href="sample-request.html" class="btn btn-primary" style="padding: 0.5rem 1rem;">Get Samples</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container fade-in">
+            <h1>Everything on this list is made by hand.</h1>
+            <p style="font-size: 1.25rem; max-width: 800px; margin: 0 auto; opacity: 0.9;">
+                Each product is made in our kitchen using the same recipe and the same ingredients, every single batch.
+                What you receive in your third order will taste identical to what you received in your first.
+            </p>
+            <div
+                style="margin-top: 2rem; display: flex; gap: 2rem; justify-content: center; opacity: 0.8; font-weight: 500;">
+                <span>🌱 100% Vegetarian</span>
+                <span>🚫 No MSG</span>
+                <span>🚫 No Fillers</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="section" style="background-color: var(--bg-main);">
+        <div class="container" id="menu-container">
+            <!-- Populated by JS -->
+        </div>
+    </section>
+
+    <!-- Bottom CTA -->
+    <section class="section"
+        style="background-color: var(--brand-green-light); color: var(--text-light); text-align: center;">
+        <div class="container fade-in">
+            <h2 style="color: var(--text-light); margin-bottom: 1rem;">Want to taste it before you order?</h2>
+            <p style="max-width: 600px; margin: 0 auto 2rem; opacity: 0.9;">
+                We send sample packs to professional kitchens. Tell us which products you want to try and we will
+                arrange it.
+            </p>
+            <a href="sample-request.html" class="btn btn-accent">Request a Sample Pack</a>
+        </div>
+    </section>
+
+    <!-- Footer (Same as index) -->
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div>
+                <h3 class="logo" style="color: var(--text-light); margin-bottom: 1rem;">KitchenKraft Foods</h3>
+                <p style="opacity: 0.8;">Handmade frozen Indian food for professional kitchens.</p>
+            </div>
+            <div>
+                <h4 class="footer-heading">Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">What We Make</a></li>
+                    <li><a href="why-us.html">How We Work</a></li>
+                    <li><a href="sample-request.html">Get Samples</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="footer-heading">Contact</h4>
+                <ul class="footer-links">
+                    <li style="opacity: 0.8;">WhatsApp / Phone: +91-8447666166</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/cms-content.js"></script>
+    <script>
+        // Advanced Scroll Reveal Animation
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add('active');
+                    }, index * 100);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('menu-container');
+            if (window.menuData) {
+                for (const [key, category] of Object.entries(window.menuData)) {
+                    let sectionHTML = `
+                        <div class="menu-category fade-in">
+                            <h2>${category.title}</h2>
+                            <div class="products-grid">
+                    `;
+
+                    category.items.forEach(item => {
+                        sectionHTML += `
+                            <div class="product-item">
+                                <h3 class="product-name">${item.name}</h3>
+                                <p class="product-details">${item.details}</p>
+                                <div class="product-meta">
+                                    <p><strong>📦 Sizes:</strong> ${item.sizes}</p>
+                                    <p><strong>🎯 Best for:</strong> ${item.bestFor}</p>
+                                </div>
+                            </div>
+                        `;
+                    });
+
+                    sectionHTML += `</div></div>`;
+                    container.innerHTML += sectionHTML;
+                }
+
+                // Apply animations after rendering
+                document.querySelectorAll('.fade-in').forEach(element => {
+                    element.classList.remove('fade-in');
+                    element.classList.add('reveal');
+                });
+
+                document.querySelectorAll('.reveal').forEach((element) => {
+                    observer.observe(element);
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

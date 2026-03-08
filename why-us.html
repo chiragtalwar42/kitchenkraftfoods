@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How We Make It | Chef-Made Frozen Indian Food | KitchenKraft Foods</title>
+    <meta name="description"
+        content="Every batch is made by hand in our kitchen. See how we source, cook, check, and deliver. Supplying restaurants, hotels, and catering companies.">
+    <link rel="stylesheet" href="styles/main.css?v=2">
+    <style>
+        .page-header {
+            background-color: var(--brand-green);
+            color: var(--text-light);
+            text-align: center;
+            padding: 6rem 1.5rem 4rem;
+        }
+
+        .page-header h1 {
+            color: var(--accent-gold);
+            font-size: clamp(2.5rem, 4vw, 3.5rem);
+            margin-bottom: 1.5rem;
+        }
+
+        .split-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .split-image {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding-left: 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--accent-gold);
+        }
+
+        .timeline-step {
+            position: relative;
+            margin-bottom: 3rem;
+            background: var(--bg-card);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .timeline-step::before {
+            content: '';
+            position: absolute;
+            left: -2.35rem;
+            top: 2rem;
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+            background: var(--brand-green);
+            border: 2px solid var(--accent-gold);
+        }
+
+        .timeline-step h3 {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .step-number {
+            color: var(--accent-gold);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+            font-family: var(--font-body);
+        }
+
+        .testimonial-section {
+            background-color: var(--brand-green);
+            color: var(--text-light);
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .split-section {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .split-image {
+                order: -1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/Logo_V2.png" alt="KitchenKraft Foods Logo">
+                KitchenKraft Foods
+            </a>
+            <button class="mobile-menu-btn">☰</button>
+            <nav class="nav-links">
+                <a href="products.html">What We Make</a>
+                <a href="why-us.html" style="color: var(--accent-gold);">How We Work</a>
+                <a href="sample-request.html" class="btn btn-primary" style="padding: 0.5rem 1rem;">Get Samples</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container fade-in">
+            <h1>Anyone can say handmade. Here is what it actually looks like.</h1>
+            <p style="font-size: 1.25rem; max-width: 800px; margin: 0 auto; opacity: 0.9;">
+                We are not a factory that uses 'handmade' as a marketing word. We are a kitchen. This is how we work.
+            </p>
+        </div>
+    </section>
+
+    <!-- The People -->
+    <section class="section" style="background-color: var(--bg-card);">
+        <div class="container split-section">
+            <div class="split-image fade-in">
+                <img src="https://images.unsplash.com/photo-1577219491136-ceaa9dafaf34?auto=format&fit=crop&q=80"
+                    alt="Kitchen team at work">
+            </div>
+            <div class="fade-in">
+                <h2>Made by people who cook. Not machines that process.</h2>
+                <p style="margin-top: 1.5rem; margin-bottom: 1.5rem;">
+                    Our kitchen team has decades of combined cooking experience. Every recipe we make was developed the
+                    way recipes should be: made, tasted, adjusted, and made again until it was right.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Process -->
+    <section class="section" style="background-color: var(--bg-main);">
+        <div class="container">
+            <h2 class="text-center fade-in" style="margin-bottom: 4rem;">From our kitchen to yours. This is the process.
+            </h2>
+
+            <div class="timeline">
+                <div class="timeline-step fade-in">
+                    <h3><span class="step-number">Step 1</span> Sourcing</h3>
+                    <p class="text-muted">We source premium lentils, whole spices, and dairy directly from trusted
+                        markets. Same source, every batch. Consistency in flavour starts before cooking begins.</p>
+                </div>
+
+                <div class="timeline-step fade-in">
+                    <h3><span class="step-number">Step 2</span> Cooking</h3>
+                    <p class="text-muted">Every item is cooked in our kitchen by our team. We do not outsource
+                        production. We do not use pre-made bases. Slow-cooked, hand-folded, and made in controlled
+                        batches.</p>
+                </div>
+
+                <div class="timeline-step fade-in">
+                    <h3><span class="step-number">Step 3</span> Quality Check</h3>
+                    <p class="text-muted">Before anything is frozen, it is tasted and checked against our batch
+                        standard. If it does not match, it does not go out.</p>
+                </div>
+
+                <div class="timeline-step fade-in">
+                    <h3><span class="step-number">Step 4</span> Freezing & Packaging</h3>
+                    <p class="text-muted">We flash-freeze within hours of cooking to lock in texture and flavour.
+                        Packaged in premium materials with production date and full ingredient list on every pack.</p>
+                </div>
+
+                <div class="timeline-step fade-in">
+                    <h3><span class="step-number">Step 5</span> Delivery</h3>
+                    <p class="text-muted">Delivered in cold chain packaging. We confirm every order before dispatch to
+                        ensure your kitchen receives what it needs, when it needs it.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="section testimonial-section">
+        <div class="container fade-in">
+            <p
+                style="font-family: var(--font-heading); font-size: 1.75rem; font-style: italic; max-width: 800px; margin: 0 auto 2rem; line-height: 1.4;">
+                "We used KitchenKraft for a 400-person corporate event last quarter. Every plate of dal makhani went out
+                consistent. Not one complaint. We have three more events booked and we are using them for all three."
+            </p>
+            <p style="color: var(--accent-gold);">— Amit, Operations Manager, Corporate Catering Company</p>
+        </div>
+    </section>
+
+    <!-- The Guarantee -->
+    <section class="section text-center" style="background-color: var(--bg-card);">
+        <div class="container fade-in">
+            <h2 style="margin-bottom: 1.5rem;">If the quality is not right, tell us.</h2>
+            <p style="max-width: 700px; margin: 0 auto 1.5rem; color: var(--text-muted);">
+                We have been supplying professional kitchens long enough to know that trust is built on what happens
+                when something goes wrong, not just when everything goes right.
+            </p>
+            <p style="max-width: 700px; margin: 0 auto; color: var(--text-muted);">
+                If a batch does not meet your standard, we want to know about it. We will make it right.
+            </p>
+        </div>
+    </section>
+
+    <!-- Bottom CTA -->
+    <section class="section"
+        style="background-color: var(--brand-green-light); color: var(--text-light); text-align: center;">
+        <div class="container fade-in">
+            <h2 style="color: var(--text-light); margin-bottom: 1rem;">Ready to try it in your kitchen?</h2>
+            <p style="max-width: 600px; margin: 0 auto 2rem; opacity: 0.9;">
+                The fastest way to know if this works for you is to taste it. We send sample packs to professional
+                kitchens. No commitment required.
+            </p>
+            <a href="sample-request.html" class="btn btn-accent">Request a Free Sample</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div>
+                <h3 class="logo" style="color: var(--text-light); margin-bottom: 1rem;">KitchenKraft Foods</h3>
+                <p style="opacity: 0.8;">Handmade frozen Indian food for professional kitchens.</p>
+            </div>
+            <div>
+                <h4 class="footer-heading">Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">What We Make</a></li>
+                    <li><a href="why-us.html">How We Work</a></li>
+                    <li><a href="sample-request.html">Get Samples</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="footer-heading">Contact</h4>
+                <ul class="footer-links">
+                    <li style="opacity: 0.8;">WhatsApp / Phone: +91-8447666166</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script>
+        // Advanced Scroll Reveal Animation
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add('active');
+                    }, index * 100);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(element => {
+            element.classList.remove('fade-in');
+            element.classList.add('reveal');
+        });
+
+        document.querySelectorAll('.reveal').forEach((element) => {
+            observer.observe(element);
+        });
+    </script>
+</body>
+
+</html>

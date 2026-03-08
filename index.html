@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handmade Frozen Indian Food for Restaurants & Caterers | KitchenKraft Foods</title>
+    <meta name="description"
+        content="Chef-made frozen gravies, curries, and snacks for professional kitchens. 100% vegetarian. Consistent quality, every order. Sample packs available.">
+    <link rel="stylesheet" href="styles/main.css?v=2">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .hero-section {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(rgba(26, 54, 45, 0.85), rgba(26, 54, 45, 0.9)), url('https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&q=80') center/cover;
+            color: var(--text-light);
+            text-align: center;
+            padding: var(--section-padding);
+        }
+
+        .hero-content h1 {
+            color: var(--text-light);
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto 2.5rem;
+            opacity: 0.9;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-card {
+            background: var(--bg-card);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--accent-gold);
+            margin-bottom: 1rem;
+        }
+
+        .split-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .split-image {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .testimonial-section {
+            background-color: var(--brand-green);
+            color: var(--text-light);
+            text-align: center;
+        }
+
+        .quote-text {
+            font-family: var(--font-heading);
+            font-size: 1.75rem;
+            font-style: italic;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            line-height: 1.4;
+        }
+
+        .quote-author {
+            color: var(--accent-gold);
+        }
+
+        .product-preview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .product-card {
+            background: var(--bg-card);
+            border-radius: 8px;
+            padding: 2.5rem 2rem;
+            box-shadow: var(--shadow-sm);
+            text-align: center;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            box-shadow: var(--shadow-md);
+        }
+
+        .product-card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .product-card p {
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            min-height: 48px;
+        }
+
+        .cta-banner {
+            background-color: var(--brand-green-light);
+            color: var(--text-light);
+            text-align: center;
+        }
+
+        .cta-banner h2 {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .split-section {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .split-image {
+                order: -1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/Logo_V2.png" alt="KitchenKraft Foods Logo">
+                KitchenKraft Foods
+            </a>
+            <button class="mobile-menu-btn">☰</button>
+            <nav class="nav-links">
+                <a href="products.html">What We Make</a>
+                <a href="why-us.html">How We Work</a>
+                <a href="sample-request.html" class="btn btn-primary" style="padding: 0.5rem 1rem;">Get Samples</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section parallax-bg">
+        <div class="container hero-content reveal">
+            <h1>Chef-made frozen Indian food.<br>Consistent quality, every order.</h1>
+            <p>Handmade gravies, curries, and snacks for restaurants, caterers, hotels, and corporate kitchens. No
+                factory shortcuts. No compromise.</p>
+            <div class="hero-buttons">
+                <button class="btn btn-accent open-modal-btn">Request a Free Sample</button>
+                <a href="products.html" class="btn btn-secondary" style="color: white; border-color: white;">See What We
+                    Make</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center fade-in">Built for professional kitchens</h2>
+            <div class="features-grid">
+                <div class="feature-card fade-in">
+                    <div class="feature-icon"><i data-lucide="utensils" width="40" height="40"></i></div>
+                    <h4>Restaurants & Cloud Kitchens</h4>
+                    <p class="text-muted mt-2">Consistent dishes, zero prep drama. Frees your team for what matters.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon"><i data-lucide="hotel" width="40" height="40"></i></div>
+                    <h4>Hotels & Banquet Halls</h4>
+                    <p class="text-muted mt-2">Event-ready portions at scale. The same quality from the first plate to
+                        the last.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon"><i data-lucide="briefcase" width="40" height="40"></i></div>
+                    <h4>Catering Companies</h4>
+                    <p class="text-muted mt-2">Handles headcount changes without wastage. Per-plate cost you can plan
+                        around.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon"><i data-lucide="building" width="40" height="40"></i></div>
+                    <h4>Corporate Cafeterias</h4>
+                    <p class="text-muted mt-2">100% vegetarian. Tastes home-cooked. Keeps your canteen score where it
+                        should be.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder Section -->
+    <section class="section" style="background-color: var(--brand-green); color: var(--text-light);">
+        <div class="container split-section">
+            <div class="fade-in">
+                <h2 style="color: var(--accent-gold); margin-bottom: 1rem;">Created by Chef Karann Talwar</h2>
+                <p style="margin-top: 1.5rem; font-size: 1.1rem; opacity: 0.9;">
+                    "We built KitchenKraft Foods because we understand the pressure of professional kitchens. Managing
+                    consistency at scale is the hardest part of the food business."
+                </p>
+                <p style="margin-top: 1rem; margin-bottom: 2rem; opacity: 0.8;">
+                    With decades of experience in high-end culinary operations, Chef Karann Talwar established
+                    KitchenKraft to bridge the gap between volume and quality. Our recipes are developed by chefs,
+                    cooked by chefs, and designed specifically to empower your kitchen crew without sacrificing the
+                    authentic taste your guests expect.
+                </p>
+            </div>
+            <div class="split-image fade-in">
+                <img src="images/founder.jpg" alt="Chef Karann Talwar"
+                    style="width: 100%; height: 400px; object-fit: cover; object-position: top;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="section" style="background-color: var(--bg-card);">
+        <div class="container split-section">
+            <div class="split-image fade-in">
+                <img src="https://plus.unsplash.com/premium_photo-1661600135804-0ee0c34538e1?auto=format&fit=crop&q=80"
+                    alt="Chef stirring a pot of curry">
+            </div>
+            <div class="fade-in">
+                <h2>Handmade means something different here.</h2>
+                <p style="margin-top: 1.5rem; font-size: 1.1rem; color: var(--text-muted);">
+                    Most frozen food is manufactured. Ours is cooked.
+                </p>
+                <p style="margin-top: 1rem; margin-bottom: 2rem;">
+                    Every batch is made by hand in our kitchen, using the same ingredients and the same process every
+                    time. No shortcuts that change the taste. No fillers that change the texture.
+                </p>
+                <p style="margin-bottom: 2.5rem;">
+                    When your kitchen crew reheats it, it will not taste like it came out of a factory. Because it did
+                    not.
+                </p>
+                <a href="why-us.html" class="btn btn-primary">See how we make it</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="section testimonial-section">
+        <div class="container fade-in">
+            <p class="quote-text">
+                "We have been reordering the dal makhani and samosas every week for four months. Our guests do not know
+                it is not made in our kitchen. That is the whole point."
+            </p>
+            <p class="quote-author">— Rahul, Owner, Independent Restaurant Type</p>
+        </div>
+    </section>
+
+    <!-- Products Preview -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center fade-in">What we make</h2>
+            <div class="product-preview-grid">
+                <div class="product-card fade-in">
+                    <h3>Gravies & Curries</h3>
+                    <p>Dal makhani, chop masala, palak paneer, and more. Made in bulk batches. Consistent flavour every
+                        time.</p>
+                    <a href="products.html" class="btn btn-secondary">See full range</a>
+                </div>
+                <div class="product-card fade-in">
+                    <h3>Snacks & Starters</h3>
+                    <p>Samosas, kachoris, and handmade starters that reheat without losing their crunch.</p>
+                    <a href="products.html" class="btn btn-secondary">See full range</a>
+                </div>
+                <div class="product-card fade-in">
+                    <h3>Custom Orders</h3>
+                    <p>Need a specific recipe, portion size, or pack quantity? We work with kitchens that have specific
+                        requirements.</p>
+                    <a href="sample-request.html" class="btn btn-secondary">Talk to us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bottom CTA -->
+    <section class="section cta-banner">
+        <div class="container fade-in">
+            <h2>Not sure yet? Try it first.</h2>
+            <p style="max-width: 600px; margin: 0 auto 2rem; opacity: 0.9;">
+                We send a sample pack to professional kitchens before you commit to anything. If it does not meet your
+                standard, you owe us nothing.
+            </p>
+            <button class="btn btn-accent open-modal-btn">Request a Free Sample</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div>
+                <h3 class="logo" style="color: var(--text-light); margin-bottom: 1rem;">KitchenKraft Foods</h3>
+                <p style="opacity: 0.8;">Handmade frozen Indian food for professional kitchens.</p>
+            </div>
+            <div>
+                <h4 class="footer-heading">Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">What We Make</a></li>
+                    <li><a href="why-us.html">How We Work</a></li>
+                    <li><a href="sample-request.html">Get Samples</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="footer-heading">Contact</h4>
+                <ul class="footer-links">
+                    <li style="opacity: 0.8;">WhatsApp / Phone: +91-8447666166</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 KitchenKraft Foods. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Sample Request Modal -->
+    <div class="modal-backdrop" id="sampleModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModalBtn">&times;</button>
+            <h2 style="margin-bottom: 1.5rem; color: var(--brand-green);">Request a Sample</h2>
+            <p style="margin-bottom: 2rem; color: var(--text-muted);">Tell us about your business and we'll send a
+                tailored sample pack to your kitchen.</p>
+
+            <form id="modal-sample-form">
+                <div style="margin-bottom: 1rem;">
+                    <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Business Name *</label>
+                    <input type="text" required
+                        style="width: 100%; padding: 0.75rem; border: 1px solid var(--border-color); border-radius: 4px;">
+                </div>
+                <div style="margin-bottom: 1rem;">
+                    <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Business Type *</label>
+                    <select required
+                        style="width: 100%; padding: 0.75rem; border: 1px solid var(--border-color); border-radius: 4px; background: white;">
+                        <option value="">Select an option</option>
+                        <option value="restaurant">Restaurant / Cloud Kitchen</option>
+                        <option value="hotel">Hotel or Banquet Hall</option>
+                        <option value="catering">Catering Company</option>
+                        <option value="corporate">Corporate Cafeteria</option>
+                    </select>
+                </div>
+                <div style="margin-bottom: 1.5rem;">
+                    <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Phone Number (WhatsApp)
+                        *</label>
+                    <input type="tel" required
+                        style="width: 100%; padding: 0.75rem; border: 1px solid var(--border-color); border-radius: 4px;">
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Send Request</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="scripts/main.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Advanced Scroll Reveal Animation
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    // Stagger effect for items in grids
+                    setTimeout(() => {
+                        entry.target.classList.add('active');
+                    }, index * 100); // 100ms delay between each item
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Select all elements that we previously used fade-in for, and replace them with reveal
+        document.querySelectorAll('.fade-in').forEach(element => {
+            element.classList.remove('fade-in');
+            element.classList.add('reveal');
+        });
+
+        document.querySelectorAll('.reveal').forEach((element) => {
+            observer.observe(element);
+        });
+
+        // Parallax Effect for Hero
+        window.addEventListener('scroll', () => {
+            const parallax = document.querySelector('.parallax-bg');
+            if (parallax) {
+                let scrollPosition = window.pageYOffset;
+                parallax.style.backgroundPositionY = scrollPosition * 0.5 + 'px';
+            }
+        });
+
+        // Modal Logic
+        const modal = document.getElementById('sampleModal');
+        const openBtns = document.querySelectorAll('.open-modal-btn');
+        const closeBtn = document.getElementById('closeModalBtn');
+
+        openBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                modal.classList.add('active');
+            });
+        });
+
+        closeBtn.addEventListener('click', () => {
+            modal.classList.remove('active');
+        });
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+            }
+        });
+
+        document.getElementById('modal-sample-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const btn = this.querySelector('button[type="submit"]');
+            const originalText = btn.textContent;
+            btn.textContent = 'Sending...';
+
+            setTimeout(() => {
+                btn.textContent = 'Request Sent!';
+                btn.style.backgroundColor = 'var(--brand-green-light)';
+
+                setTimeout(() => {
+                    modal.classList.remove('active');
+                    btn.textContent = originalText;
+                    btn.style.backgroundColor = '';
+                    this.reset();
+                }, 2000);
+            }, 1000);
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request a Free Sample | Handmade Frozen Indian Food | KitchenKraft Foods</title>
+    <meta name="description"
+        content="Try our handmade frozen Indian food in your kitchen before you commit. We send sample packs to professional kitchens. Contact us within 24 hours.">
+    <link rel="stylesheet" href="styles/main.css?v=2">
+    <style>
+        .page-header {
+            background-color: var(--brand-green);
+            color: var(--text-light);
+            text-align: center;
+            padding: 6rem 1.5rem 4rem;
+        }
+
+        .page-header h1 {
+            color: var(--accent-gold);
+            font-size: clamp(2.5rem, 4vw, 3.5rem);
+            margin-bottom: 1.5rem;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: -3rem auto 3rem;
+            background: var(--bg-card);
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            z-index: 10;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.875rem;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--brand-green);
+            box-shadow: 0 0 0 3px rgba(26, 54, 45, 0.1);
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1rem;
+            font-size: 1.1rem;
+            margin-top: 1rem;
+        }
+
+        .submit-note {
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 1rem;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .info-block h3 {
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .info-block li {
+            margin-bottom: 1rem;
+            color: var(--text-muted);
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+
+        @media (max-width: 768px) {
+            .form-container {
+                padding: 2rem 1.5rem;
+                margin-top: -2rem;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body style="background-color: var(--bg-main);">
+    <!-- Header -->
+    <header class="site-header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/Logo_V2.png" alt="KitchenKraft Foods Logo">
+                KitchenKraft Foods
+            </a>
+            <button class="mobile-menu-btn">☰</button>
+            <nav class="nav-links">
+                <a href="products.html">What We Make</a>
+                <a href="why-us.html">How We Work</a>
+                <a href="sample-request.html" class="btn btn-primary" style="padding: 0.5rem 1rem;">Get Samples</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container fade-in">
+            <h1>Try it before you commit to anything.</h1>
+            <p style="font-size: 1.25rem; max-width: 800px; margin: 0 auto; opacity: 0.9;">
+                We send sample packs to professional kitchens. Tell us who you are, what you want to try, and where to
+                send it. We will follow up within 24 hours to confirm the details.
+            </p>
+        </div>
+    </section>
+
+    <!-- Form Section -->
+    <div class="container">
+        <div class="form-container fade-in">
+            <h2 style="margin-bottom: 2rem; text-align: center;">Request a Sample Pack</h2>
+            <form action="#" method="POST" id="sample-form">
+                <div class="form-group">
+                    <label class="form-label" for="name">Your Name *</label>
+                    <input type="text" id="name" name="name" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="business">Business Name *</label>
+                    <input type="text" id="business" name="business" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="type">Business Type *</label>
+                    <select id="type" name="type" class="form-control" required>
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="Restaurant">Restaurant / Cloud Kitchen</option>
+                        <option value="Hotel">Hotel or Banquet Hall</option>
+                        <option value="Catering">Catering Company</option>
+                        <option value="Corporate">Corporate Cafeteria or Canteen</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="products">Products you want to try</label>
+                    <input type="text" id="products" name="products" class="form-control"
+                        placeholder="e.g. Samosas, Dal Makhani (or 'Not sure, send recommendation')">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="phone">Phone Number (WhatsApp preferred) *</label>
+                    <input type="tel" id="phone" name="phone" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="address">Delivery address or area *</label>
+                    <textarea id="address" name="address" class="form-control" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="notes">Anything else we should know?</label>
+                    <textarea id="notes" name="notes" class="form-control"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary submit-btn">Send My Sample Request</button>
+                <p class="submit-note">We will contact you within 24 hours to confirm your sample and delivery details.
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Info Section -->
+    <section class="section pt-0">
+        <div class="container fade-in">
+            <div class="info-grid">
+                <div class="info-block">
+                    <h3>What happens after you submit</h3>
+                    <ul>
+                        <li><span style="color: var(--brand-green);">1.</span> We review your request and confirm the
+                            sample contents based on your business type.</li>
+                        <li><span style="color: var(--brand-green);">2.</span> We contact you within 24 hours via
+                            WhatsApp or Phone to confirm your delivery details.</li>
+                        <li><span style="color: var(--brand-green);">3.</span> Your sample ships in cold-chain
+                            packaging. You will receive it ready to cook and serve.</li>
+                        <li><span style="color: var(--brand-green);">4.</span> If you have questions after tasting, we
+                            are one message away.</li>
+                    </ul>
+                </div>
+                <div class="info-block"
+                    style="background: var(--brand-green); color: var(--text-light); padding: 2rem; border-radius: 8px;">
+                    <h3 style="color: var(--accent-gold);">Not ready for a sample?</h3>
+                    <p style="margin-bottom: 1.5rem; opacity: 0.9;">Just want to talk about your kitchen's needs? Reach
+                        us directly:</p>
+                    <div style="font-size: 1.1rem; line-height: 2;">
+                        <p><strong>WhatsApp / Phone:</strong><br> +91-8447666166</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div>
+                <h3 class="logo" style="color: var(--text-light); margin-bottom: 1rem;">KitchenKraft Foods</h3>
+                <p style="opacity: 0.8;">Handmade frozen Indian food for professional kitchens.</p>
+            </div>
+            <div>
+                <h4 class="footer-heading">Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">What We Make</a></li>
+                    <li><a href="why-us.html">How We Work</a></li>
+                    <li><a href="sample-request.html">Get Samples</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="footer-heading">Contact</h4>
+                <ul class="footer-links">
+                    <li style="opacity: 0.8;">WhatsApp / Phone: +91-8447666166</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 KitchenKraft Foods. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script>
+        // Advanced Scroll Reveal Animation
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add('active');
+                    }, index * 100);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(element => {
+            element.classList.remove('fade-in');
+            element.classList.add('reveal');
+        });
+
+        document.querySelectorAll('.reveal').forEach((element) => {
+            observer.observe(element);
+        });
+
+        document.getElementById('sample-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            // Simple validation feedback for demo
+            const btn = this.querySelector('.submit-btn');
+            const originalText = btn.textContent;
+            btn.textContent = 'Sending...';
+            btn.style.backgroundColor = 'var(--accent-gold)';
+            btn.style.color = 'var(--bg-main)';
+
+            setTimeout(() => {
+                btn.textContent = 'Request Sent!';
+                btn.style.backgroundColor = 'var(--brand-green-light)';
+                btn.style.color = 'var(--text-light)';
+                this.reset();
+
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                    btn.style.backgroundColor = '';
+                    btn.style.color = '';
+                }, 3000);
+            }, 1000);
+        });
+    </script>
+</body>
+
+</html>
