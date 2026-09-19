@@ -1,0 +1,9 @@
+# Keep internal docs and config out of the published site
+*.md
+*.txt
+*.pdf
+.DS_Store
+.gitignore
+.claude
+.venv
+wrangler.jsonc
